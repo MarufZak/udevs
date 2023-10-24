@@ -4,4 +4,3 @@ Notes:
 3. Although it's admin panel, NextJS is used for demo purposes.
 4. I didn't understand the component near select in dashboard, so i made it timer.
 5. Hover and focus states were not shown in design, so i made as in demo.
-6. 
