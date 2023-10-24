@@ -5,8 +5,6 @@ import ReadyOrdersList from "./ready-orders";
 import DeliveringOrdersList from "./delivering-orders";
 import { getOrders } from "./utils";
 
-export const dynamic = "force-dynamic";
-
 // separate loading ui from not loading ui.
 const OrdersList = async () => {
   const orders = await getOrders();
