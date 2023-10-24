@@ -12,12 +12,12 @@ import { AlertCircle, Car, Check, Clock4, User } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-const ReadyOrdersList = ({ orders = [] }) => {
+const DeliveringOrdersList = ({ orders = [] }) => {
   return (
     <div className="rounded-md overflow-hidden">
-      <header className="py-3 px-3 bg-success text-success-foreground">
+      <header className="py-3 px-3 bg-transit text-transit-foreground">
         <h3 className="text-sm font-bold text-background uppercase">
-          Готов ({orders.length})
+          Курьер в пути ({orders.length})
         </h3>
       </header>
       <section className="p-2 bg-border flex flex-col gap-2">
@@ -100,4 +100,4 @@ const ReadyOrdersList = ({ orders = [] }) => {
   );
 };
 
-export default ReadyOrdersList;
+export default DeliveringOrdersList;

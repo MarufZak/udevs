@@ -13,6 +13,7 @@ import React from "react";
 import NewOrdersList from "./new-orders";
 import PendingOrdersList from "./pending-orders";
 import ReadyOrdersList from "./ready-orders";
+import DeliveringOrdersList from "./delivering-orders";
 
 const orders = [
   {
@@ -145,6 +146,59 @@ const pendingOrders = [
   },
 ];
 
+const readyOrdersList = [
+  {
+    id: 321545,
+    price: 300560,
+    timestamp: "13:00",
+    type: "person",
+    paymentMethod: "payme",
+    items: [
+      {
+        id: 1,
+        count: 3,
+        title: "Пепси 0,5",
+      },
+    ],
+    comments: [
+      {
+        id: 1,
+        comment: "Пожайлуста сделайте быстрее",
+      },
+      {
+        id: 2,
+        comment: "Я спешу",
+      },
+    ],
+  },
+  {
+    id: 321546,
+    price: 300560,
+    timestamp: "12:00",
+    type: "car",
+    paymentMethod: "payme",
+    items: [
+      {
+        id: 1,
+        count: 3,
+        title: "Пепси 0,5",
+      },
+      {
+        id: 2,
+        count: 1,
+        title: "Гамбургер",
+        ingredients: ["С сыром", "Без лука"],
+      },
+      {
+        id: 3,
+        count: 2,
+        title: "Лаваш мясной Standart острый",
+      },
+    ],
+    comments: [],
+  },
+];
+
 const OrdersPage = () => {
   return (
     <Page title="Сегодняшние заказы">
@@ -168,7 +222,8 @@ const OrdersPage = () => {
       <div className="grid grid-cols-4 gap-4">
         <NewOrdersList orders={orders} />
         <PendingOrdersList orders={pendingOrders} />
-        <ReadyOrdersList orders={pendingOrders} />
+        <ReadyOrdersList orders={readyOrdersList} />
+        <DeliveringOrdersList orders={pendingOrders} />
       </div>
     </Page>
   );
