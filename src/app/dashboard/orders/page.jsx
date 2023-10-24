@@ -13,8 +13,6 @@ import React from "react";
 import OrdersList from "./orders-list";
 import Timer from "@/components/timer";
 
-export const dynamic = "force-dynamic";
-
 // don't split into layout (dynamic titles).
 const OrdersPage = () => {
   return (
