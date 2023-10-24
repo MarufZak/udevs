@@ -13,8 +13,10 @@ import React from "react";
 import OrdersList from "./orders-list";
 import Timer from "@/components/timer";
 
+export const dynamic = "force-dynamic";
+
 // don't split into layout (dynamic titles).
-const OrdersPage = async () => {
+const OrdersPage = () => {
   return (
     <Page title="Сегодняшние заказы">
       <header className="mb-7 flex justify-between">
