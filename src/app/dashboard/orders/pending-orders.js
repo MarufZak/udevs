@@ -6,7 +6,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/card";
-import { Check, Clock4, X } from "lucide-react";
+import { Tooltip, TooltipTrigger } from "@/components/tooltip";
+import { AlertCircle, Check, Clock4, X } from "lucide-react";
 import React from "react";
 
 const NewOrdersList = ({ orders = [] }) => {
@@ -23,6 +24,13 @@ const NewOrdersList = ({ orders = [] }) => {
             <Card key={order.id}>
               <CardHeader>
                 <CardTitle>ID: {order.id}</CardTitle>
+                <Tooltip>
+                  <TooltipTrigger asChild={true}>
+                    <Button variant="icon" size="sm">
+                      <AlertCircle size={16} rotate={180} />
+                    </Button>
+                  </TooltipTrigger>
+                </Tooltip>
               </CardHeader>
               <CardContent>
                 <ul className="flex flex-col gap-3">

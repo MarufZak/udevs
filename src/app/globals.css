@@ -11,7 +11,7 @@
     --card-foreground: 216 34% 57%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 205 15% 12%;
 
     --primary: 214 93% 51%;
     --primary-foreground: 0 0% 100%;
@@ -27,6 +27,15 @@
 
     --destructive: 0 0% 100%;
     --destructive-foreground: 5 91% 66%;
+
+    --pending: 46 94% 54%;
+    --pending-foreground: 0 0% 100%;
+
+    --success: 134 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --transit: 167 76% 43%;
+    --transit-foreground: 0 0% 100%;
 
     --border: 200 13% 91%;
     --input: 200 10% 64%;

@@ -6,8 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/card";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/tooltip";
 import { formatPrice } from "@/utils";
-import { Car, Check, Clock4, User, X } from "lucide-react";
+import { AlertCircle, Car, Check, Clock4, User, X } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -25,7 +26,22 @@ const NewOrdersList = ({ orders = [] }) => {
           return (
             <Card key={order.id}>
               <CardHeader className="flex justify-between items-center">
-                <CardTitle>ID: {order.id}</CardTitle>
+                <CardTitle className="flex items-center gap-1.5">
+                  ID: {order.id}
+                  <Tooltip>
+                    <TooltipTrigger asChild={true}>
+                      <Button variant="icon" size="xs">
+                        <AlertCircle
+                          size={16}
+                          className="rotate-180 text-card-foreground"
+                        />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>ID of the order. Attached with package.</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </CardTitle>
                 <div className="flex gap-2">
                   <span className="font-medium text-xs">
                     {formatPrice(order.price)} сум
