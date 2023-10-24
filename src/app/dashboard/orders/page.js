@@ -11,6 +11,8 @@ import { range } from "@/utils";
 import { ClipboardList } from "lucide-react";
 import React from "react";
 import NewOrdersList from "./new-orders";
+import PendingOrdersList from "./pending-orders";
+import ReadyOrdersList from "./ready-orders";
 
 const orders = [
   {
@@ -88,11 +90,38 @@ const orders = [
       },
     ],
   },
+];
+
+const pendingOrders = [
   {
-    id: 3215478,
+    id: 321545,
+    price: 300560,
+    timestamp: "13:00",
+    type: "person",
+    paymentMethod: "payme",
+    items: [
+      {
+        id: 1,
+        count: 3,
+        title: "Пепси 0,5",
+      },
+    ],
+    comments: [
+      {
+        id: 1,
+        comment: "Пожайлуста сделайте быстрее",
+      },
+      {
+        id: 2,
+        comment: "Я спешу",
+      },
+    ],
+  },
+  {
+    id: 321546,
     price: 300560,
     timestamp: "12:00",
-    type: "person",
+    type: "car",
     paymentMethod: "payme",
     items: [
       {
@@ -112,6 +141,7 @@ const orders = [
         title: "Лаваш мясной Standart острый",
       },
     ],
+    comments: [],
   },
 ];
 
@@ -135,8 +165,10 @@ const OrdersPage = () => {
           </SelectContent>
         </Select>
       </header>
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 gap-4">
         <NewOrdersList orders={orders} />
+        <PendingOrdersList orders={pendingOrders} />
+        <ReadyOrdersList orders={pendingOrders} />
       </div>
     </Page>
   );

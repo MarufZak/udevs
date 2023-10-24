@@ -25,10 +25,10 @@ import {
 import Image from "next/image";
 import React from "react";
 
-const PendingOrdersList = ({ orders = [] }) => {
+const ReadyOrdersList = ({ orders = [] }) => {
   return (
     <div className="rounded-md overflow-hidden">
-      <header className="py-3 px-3 bg-pending text-pending-foreground">
+      <header className="py-3 px-3 bg-success text-success-foreground">
         <h3 className="text-sm font-bold text-background uppercase">
           Заготовка ({orders.length})
         </h3>
@@ -142,4 +142,4 @@ const PendingOrdersList = ({ orders = [] }) => {
   );
 };
 
-export default PendingOrdersList;
+export default ReadyOrdersList;
