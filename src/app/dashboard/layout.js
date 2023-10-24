@@ -6,7 +6,12 @@ const DashboardLayout = ({ children }) => {
   return (
     <div className="grid grid-cols-[56px_1fr] grid-rows-[56px_1fr] min-h-screen">
       <div className="grid place-items-center border border-border">
-        <Image width={17} height={25} src="logo.svg" alt="Udevs company logo" />
+        <Image
+          width={17}
+          height={25}
+          src="/logo.svg"
+          alt="Udevs company logo"
+        />
       </div>
       <DashboardSidebar />
       {children}
