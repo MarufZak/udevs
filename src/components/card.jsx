@@ -14,10 +14,7 @@ Card.displayName = "Card";
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(
-      "flex flex-col space-y-1.5 p-3 border-b border-border",
-      className
-    )}
+    className={cn("flex space-y-1.5 p-3 border-b border-border", className)}
     {...props}
   />
 ));

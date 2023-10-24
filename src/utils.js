@@ -19,3 +19,7 @@ export function range(start = 1, end, step = 1) {
 
   return result;
 }
+
+export const formatPrice = (price) => {
+  return Intl.NumberFormat("uz-UZ").format(price);
+};

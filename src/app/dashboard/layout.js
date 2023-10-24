@@ -9,7 +9,7 @@ const DashboardLayout = ({ children }) => {
         <Image
           width={17}
           height={25}
-          src="/logo.svg"
+          src="/assets/logo.svg"
           alt="Udevs company logo"
         />
       </div>

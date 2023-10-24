@@ -12,7 +12,7 @@ const DashboardSidebar = () => {
 
   const user = {
     name: "Ma'ruf",
-    avatar: "/avatar.png",
+    avatar: "/assets/avatar.png",
   };
 
   return (

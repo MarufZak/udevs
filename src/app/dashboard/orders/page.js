@@ -17,6 +17,8 @@ const orders = [
     id: 321545,
     price: 300560,
     timestamp: "12:00",
+    type: "person",
+    paymentMethod: "payme",
     items: [
       {
         id: 1,
@@ -40,6 +42,8 @@ const orders = [
     id: 321546,
     price: 300560,
     timestamp: "12:00",
+    type: "car",
+    paymentMethod: "click",
     items: [
       {
         id: 1,
@@ -63,6 +67,33 @@ const orders = [
     id: 321547,
     price: 300560,
     timestamp: "12:00",
+    type: "car",
+    paymentMethod: "apelsin",
+    items: [
+      {
+        id: 1,
+        count: 3,
+        title: "Пепси 0,5",
+      },
+      {
+        id: 2,
+        count: 1,
+        title: "Гамбургер",
+        ingredients: ["С сыром", "Без лука"],
+      },
+      {
+        id: 3,
+        count: 2,
+        title: "Лаваш мясной Standart острый",
+      },
+    ],
+  },
+  {
+    id: 3215478,
+    price: 300560,
+    timestamp: "12:00",
+    type: "person",
+    paymentMethod: "payme",
     items: [
       {
         id: 1,

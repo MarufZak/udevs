@@ -6,9 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/card";
-import { formatPrice } from "@/utils";
-import { Car, Check, Clock4, User, X } from "lucide-react";
-import Image from "next/image";
+import { Check, Clock4, X } from "lucide-react";
 import React from "react";
 
 const NewOrdersList = ({ orders = [] }) => {
@@ -16,29 +14,15 @@ const NewOrdersList = ({ orders = [] }) => {
     <div className="rounded-md overflow-hidden">
       <header className="py-3 px-3 bg-primary">
         <h3 className="text-sm font-bold text-background uppercase">
-          Новый ({orders.length})
+          Заготовка ({orders.length})
         </h3>
       </header>
       <section className="p-2 bg-border flex flex-col gap-2">
         {orders.map((order) => {
-          const TypeIcon = order.type === "car" ? Car : User;
           return (
             <Card key={order.id}>
-              <CardHeader className="flex justify-between items-center">
+              <CardHeader>
                 <CardTitle>ID: {order.id}</CardTitle>
-                <div className="flex gap-2">
-                  <span className="font-medium text-xs">
-                    {formatPrice(order.price)} сум
-                  </span>
-                  <TypeIcon size={16} className="text-inherit" />
-                  <Image
-                    className="object-contain"
-                    src={`/assets/${order.paymentMethod}.png`}
-                    width={14}
-                    height={14}
-                    alt={`Payment method: ${order.paymentMethod}`}
-                  />
-                </div>
               </CardHeader>
               <CardContent>
                 <ul className="flex flex-col gap-3">
