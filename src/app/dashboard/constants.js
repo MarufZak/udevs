@@ -1,4 +1,4 @@
-import { FileSpreadsheet, LayoutDashboard } from "lucide-react";
+import { LayoutDashboard } from "lucide-react";
 
 export const sidebarLinks = [
   {
@@ -6,9 +6,4 @@ export const sidebarLinks = [
     icon: LayoutDashboard,
     slug: "orders",
   },
-  //   {
-  //     id: 2,
-  //     icon: FileSpreadsheet,
-  //     slug: "files",
-  //   },
 ];

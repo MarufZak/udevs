@@ -18,16 +18,20 @@ const Input = React.forwardRef(({ className, type, ...props }, ref) => {
 });
 
 const SearchInput = React.forwardRef(({ className, type, ...props }, ref) => {
+  const id = React.useId();
   return (
     <div className="relative">
-      <Search
-        size={18}
-        className="text-primary absolute left-[11px] top-[50%] translate-y-[-50%]"
-      />
+      <label htmlFor={id}>
+        <Search
+          size={18}
+          className="text-primary absolute left-[11px] top-[50%] translate-y-[-50%] z-[1]"
+        />
+      </label>
       <Input
+        id={id}
         type={type}
         ref={ref}
-        className={cn("pl-10", className)}
+        className={cn("pl-10 absolute inset-0 min-w-[240px]", className)}
         {...props}
       />
     </div>

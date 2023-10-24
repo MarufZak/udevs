@@ -20,6 +20,26 @@ export function range(start = 1, end, step = 1) {
   return result;
 }
 
-export const formatPrice = (price) => {
+export function formatPrice(price) {
   return Intl.NumberFormat("uz-UZ").format(price);
-};
+}
+
+export function wait(ms) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, ms);
+  });
+}
+
+export function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+export function addZero(number) {
+  if (number < 10) {
+    return `0${number}`;
+  }
+
+  return number;
+}

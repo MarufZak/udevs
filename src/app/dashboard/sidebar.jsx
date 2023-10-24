@@ -21,7 +21,6 @@ const DashboardSidebar = () => {
         {sidebarLinks.map((link) => {
           const Icon = link.icon;
           const url = `/dashboard/${link.slug}`;
-          console.log(url);
           return (
             <li key={link.id}>
               {/* prevent default link focus styles */}
@@ -39,8 +38,15 @@ const DashboardSidebar = () => {
         })}
       </ul>
       <div className="flex flex-col items-center">
-        <Button className="mb-[10px] " variant="ghost" size="icon">
-          <Settings size={16} className="text-secondary" />
+        <Button
+          asChild={true}
+          className="mb-[10px] "
+          variant="ghost"
+          size="icon"
+        >
+          <Link href="dashboard/settings">
+            <Settings size={16} className="text-secondary" />
+          </Link>
         </Button>
         <Avatar className="w-full h-[54px] grid place-items-center rounded-none border-t-[1px]">
           <AvatarFallback className="w-[32px] h-[32px]">

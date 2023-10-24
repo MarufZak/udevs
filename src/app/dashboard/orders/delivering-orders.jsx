@@ -46,6 +46,7 @@ const DeliveringOrdersList = ({ orders = [] }) => {
                   <span className="font-medium text-xs">
                     {formatPrice(order.price)} сум
                   </span>
+                  <TypeIcon size={16} className="text-inherit" />
                   <Image
                     className="object-contain"
                     src={`/assets/${order.paymentMethod}.png`}
@@ -53,7 +54,6 @@ const DeliveringOrdersList = ({ orders = [] }) => {
                     height={14}
                     alt={`Payment method: ${order.paymentMethod}`}
                   />
-                  <TypeIcon size={16} className="text-inherit" />
                 </div>
               </CardHeader>
               <CardContent>
@@ -86,12 +86,6 @@ const DeliveringOrdersList = ({ orders = [] }) => {
                   {order.timestamp}
                 </time>
               </CardContent>
-              <CardFooter className="flex-col items-stretch">
-                <Button className="w-full" variant="outline" size="sm">
-                  <Check size={18} className="mr-1" />
-                  Готово
-                </Button>
-              </CardFooter>
             </Card>
           );
         })}

@@ -102,7 +102,7 @@ const PendingOrdersList = ({ orders = [] }) => {
               <CardFooter className="flex-col items-stretch">
                 {order.comments.length > 0 && (
                   <Collapsible>
-                    <CollapsibleTrigger className="flex justify-between items-center text-card-foreground py-3 w-full">
+                    <CollapsibleTrigger className="flex justify-between items-center text-card-foreground pb-3 w-full">
                       <p className="text-sm font-medium">
                         Коментарии ({order.comments.length})
                       </p>
