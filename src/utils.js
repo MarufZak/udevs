@@ -24,15 +24,16 @@ export function formatPrice(price) {
   return Intl.NumberFormat("uz-UZ").format(price);
 }
 
-export function wait(ms) {
+export function wait(start, end) {
+  const timeout = getRandomNumber(start, end);
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, ms);
+    }, timeout);
   });
 }
 
-export function getRandomNumber(min, max) {
+function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
